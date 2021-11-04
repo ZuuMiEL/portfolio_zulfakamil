@@ -1,0 +1,295 @@
+* {
+	font-family: 'Bebas Neue', cursive;
+	padding: 0;
+	margin: 0;
+	color: black;
+}
+
+/* header */
+header {
+	position: fixed;
+	height: 70px;
+	width: 100%;
+	background-color: #808080;
+}
+
+header h1 {
+	display: inline-block;
+	float: left;
+	padding: 15px 25px;
+}
+
+header h1 a:hover {
+	color: #00969e;
+}
+
+header h1 a {
+	transition: .5s;
+}
+
+header ul {
+	float: right;
+}
+
+header ul li {
+	display: inline-block;
+	padding: 25px;
+	font-size: 20px;
+}
+
+header ul li a:hover {
+	color: #00969e;
+}
+
+header ul li a {
+	transition: .5s;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.menu-sidebar {
+	float: right;
+	display: none;
+	padding: 15px; 
+}
+
+@media (max-width: 768px) {
+	.menu-sidebar{
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+	.col-4 {
+		width: 50%;
+	}
+	.col-3 {
+		width: 100%;
+	}
+	.fas {
+		font-size: 40px;
+	}
+}
+
+/* bagain sidebar */
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -100px;
+	width: 100px;
+	background-color: rgba(128, 128, 128, .8);
+	transition: .7s;
+	z-index: 9999;
+}
+
+.sidebar ul li a {
+	color: black;
+	font-size: 20px;
+	padding: 20px;
+	display: block;
+}
+
+.sidebar ul li {
+	transition: .7s;
+	transition-property: background-color;
+}
+
+.sidebar ul li:hover {
+	background-color: #00969e;
+}
+
+#bar {
+	display: none;
+}
+
+#bar:checked ~ .sidebar {
+	left: 0;
+}
+
+/* bagian banner */
+.banner {
+	background: linear-gradient(to top,#00969e 0%, #808080 60%);
+	padding: 120px 0;
+}
+
+.banner img {
+	width: 150px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.b-center {
+	text-align: center;
+}
+
+.banner h2,
+.banner p,
+.banner span {
+	color: black;
+}
+
+.banner h2 {
+	margin-bottom: 10px;
+}
+
+.banner p {
+	font-size: 18px;
+}
+
+section {
+	padding: 50px 0;
+}
+
+section h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	margin: 20px;
+	position: relative;
+}
+
+section h3::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	width: 120px;
+	height: 1px;
+	background-color: #ddd;
+	left: calc(50% - 60px);
+}
+
+section h3::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	width: 40px;
+	height: 4px;
+	background-color: #00969e;
+	left: calc(50% - 20px);
+}
+
+/* bagian about */
+
+#about p {
+	text-align: center;
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+
+/* bagian skills */
+
+#skills {
+	background-color: #808080;
+}
+
+#skills .l-skill {
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin: 5px 0 20px 0;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.l-skill {
+	border-radius: 40px;
+}
+
+.l-skill .nilai {
+	height: 30px;
+	background-color: #00969e;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	width: 10%;
+	transition: width 2s;
+	border-radius: 40px;
+}
+
+.edit:hover {
+	width: 85%;
+}
+
+.pho:hover {
+	width: 90%;
+}
+
+.fot:hover {
+	width: 100%;
+}
+
+.kom:hover {
+	width: 80%;
+}
+
+/*portfolio*/
+.cols-4 {
+	width: 25%;
+	box-sizing: border-box;
+	padding: 5px;
+	float: left;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.cols-4 img {
+	width: 100%;
+	border-radius: 20px;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.cols-4 a:hover img {
+	transform: scale(1.2);
+	transition: 1s;
+}
+
+/*bagian contact*/
+#contact {
+	background-color: #808080;
+}
+
+.col-3 {
+	width: 33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding: 50px 10px;
+}
+
+.col-3 h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+
+/* footer */
+footer {
+	background-color: #00969e;
+	padding: 50px;
+	text-align: center;
+}
+
+footer small {
+	color: #fff;
+}
+
+html {
+	scroll-behavior: smooth;
+}
